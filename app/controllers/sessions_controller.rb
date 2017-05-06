@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-   skip_before_action :authenticate_user_from_token!
+   skip_before_action :authenticate_user_from_token!, raise: false
 
      #POST /v1/login
     def create

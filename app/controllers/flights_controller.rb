@@ -1,5 +1,5 @@
 class FlightsController < ApplicationController
-  skip_before_action :authenticate_user_from_token!
+  before_action :authenticate_user_from_token!
 
   def index
      @flights = Flight.all
