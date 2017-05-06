@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  skip_before_action :user_authenticate_from_token!
+  skip_before_action :user_authenticate_from_token!, raise: false
 
   def index
    customers = Customer.all

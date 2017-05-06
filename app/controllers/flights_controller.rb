@@ -1,5 +1,5 @@
 class FlightsController < ApplicationController
-  before_action :authenticate_user_from_token!
+  before_action :authenticate_user_from_token!, raise: false
 
   def index
      @flights = Flight.all
